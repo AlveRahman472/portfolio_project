@@ -1,0 +1,417 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    font-family:sans-serif;
+    text-align: center;
+}
+a{
+    color: rgb(12, 4, 4);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+p{
+    font-size: 2.5rem;
+    text-align: justify;
+}
+.dotted-hr{
+    border:  dotted 6px rgb(8, 4, 4);
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+[class*="col-"]{
+    width: 100%;
+}
+.navbar{
+    background-color: rgb(86, 107, 107);
+    padding: 1% 7%;
+    text-align: center; 
+}
+.navbar h1{
+    color: rgb(10, 3, 3);
+    margin: 0;
+    padding-top: 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.nav-menu a{
+background-color: rgb(127, 119, 136) ;
+border-radius: 15px;
+margin: 7px 5px;
+padding: 10px;
+}
+
+.nav-menu a:hover{
+
+    background-color: rgb(233, 229, 229);
+    box-shadow: 0.4px 8px 5px rgb(5, 2, 2)
+}
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear:both;
+}
+/* profile desing starts from here */
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+.profile .top-computer-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    /*transition: transform 2s; */
+}
+.profile .top-computer-icon:hover{
+    /*transform: rotate(360deg); */
+    box-shadow: 0.4px 8px 5px rgb(8, 6, 6) 
+}
+.profile-desc h1{
+    font-family: monospace;
+    color: darkred;
+    font-size: 2rem;
+
+}
+.profile-desc p{
+    color: rgb(19, 9, 19);
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: medium;
+    font-family:cursive;
+}
+
+.profile .bottom-computer-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    /*transition: transform 2s; */
+}
+.profile .bottom-computer-icon:hover{
+   /* transform: rotate(360deg); */
+   box-shadow: 0.4px 8px 5px rgb(5, 2, 2)
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+
+/* about me */
+.about-me{
+    background-color: rgb(86, 107, 107);
+    padding: 1% 7%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: monospace;
+   
+
+}
+.aboutme-image img{
+  border: 5px solid rgb(14, 13, 13); 
+  border-radius: 50%;
+  height: 220px;
+  width: 200px;
+
+
+}
+
+.about-me p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.about-me a{
+    font-size: 1.2rem;
+}
+.cv-button{
+    background-color: rgb(245, 234, 234);
+    color:#080808 ;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+
+.cv-button:hover{
+    box-shadow: 0.4px 8px 5px rgb(5, 2, 2);
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.professional-experience{
+    padding: 1% 0%;
+}
+
+.professional-experience .card-desc{
+    background-color: rgb(247, 239, 239);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+    height: 500px;
+}
+
+.card:hover{
+    box-shadow: 0.4px 8px 5px rgb(161, 23, 23);
+}
+
+.card-icon{
+    text-align: center;
+}
+
+.card-icon img{
+    margin-top: 20px;
+    width: 100px;
+}
+.rounded-img{
+   border: 5px solid rgb(148, 9, 9); 
+   border-radius: 50%;
+   padding: 15px;
+}
+.card-title h2{
+    background-color: rgb(150, 56, 56);
+    padding: 10px;
+    text-align: center;
+}
+
+.slills-container{
+    padding-right: 50px;
+}
+
+.skills-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.skills-container li::before{
+   content: '';
+   position: absolute;
+   top: calc(100% + 5px);
+   left: 0px;
+   width: 100%;
+   height: 10px;
+   background-color: rgb(86,86,153,.5);
+   border-radius: 1000px;
+}
+
+
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0px;
+    width: 0;
+    height: 10px;
+    background-color: rgb(86,86,153,1);
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+ }
+
+ .skills-container li.html::after{
+    animation-name: html;
+ }
+
+ @keyframes html{
+    to{
+        width: 70%;
+    }
+ }
+
+ .skills-container li.css::after{
+    animation-name: css;
+ }
+
+ @keyframes css{
+    to{
+        width: 70%;
+    }
+ }
+
+ .skills-container li.bootstrap::after{
+    animation-name: bootstrap;
+ }
+
+ @keyframes bootstrap{
+    to{
+        width: 60%;
+    }
+ }
+
+ .skills-container li.js::after{
+    animation-name: js;
+ }
+
+ @keyframes js{
+    to{
+        width: 80%;
+    }
+ }
+
+ .skills-container li.jquery::after{
+    animation-name: jquery;
+ }
+
+ @keyframes jquery{
+    to{
+        width: 60%;
+    }
+ }
+
+ .skills-container li.react::after{
+    animation-name: react;
+ }
+
+ @keyframes react{
+    to{
+        width: 60%;
+    }
+ }
+ 
+ .skills-container li.node::after{
+    animation-name: node;
+ }
+
+ @keyframes node{
+    to{
+        width: 60%;
+    }
+ }
+
+ .skills-container li.git::after{
+    animation-name: git;
+ }
+
+ @keyframes git{
+    to{
+        width: 90%;
+    }
+ }
+.professional-experience::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+
+
+.achievement-contact{
+    padding: 1%  7%;
+    background-color:rgb(79, 116, 117);
+    color: white;
+
+}
+
+.contact{
+    text-align: center;
+}
+
+.contact input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(79, 19, 134);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+
+.contact-links{
+    text-align: center;
+}
+
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: rgb(103, 103, 104);
+}
+
+.achievement-contact::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+
+.footer{
+    background-color: rgb(221, 217, 217);
+    color: rgb(26, 23, 23);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-menu a{
+    display: block;
+    margin: 15px;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover{
+    color: rgb(192, 21, 21);
+}
+
+.footer::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+
